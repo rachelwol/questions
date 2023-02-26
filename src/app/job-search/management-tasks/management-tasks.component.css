@@ -1,0 +1,31 @@
+.example-section {
+  margin: 12px 0;
+}
+
+::ng-deep .mat-checkbox-inner-container {
+  margin-left: 8px !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #075659;
+}
+
+::ng-deep .mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+  background-color: #075659;
+}
+
+.title {
+  text-align: center;
+  color: #075659;
+  font-weight: bold;
+}
+
+.subject-btn{
+  background-color: #075659;
+  color: #fff;
+  font-size: large;
+  margin: 1rem 0;
+  padding: 0.2rem 1rem;
+  width: 150px;
+  float: left;
+}

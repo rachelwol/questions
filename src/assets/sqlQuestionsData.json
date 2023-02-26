@@ -1,0 +1,189 @@
+{
+    "questions": [
+        {
+            "question": "הם ראשי התיבות של sql",
+            "answer": "Structured Query Language - שפת שאילתות מובנית",
+            "showAnswer": false
+        },
+        {
+            "question": "איזו פקודה משמשת לשליפת מידע מטבלה?",
+            "answer": "select",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נשלוף את כל הרשומות מהטבלה tbl ?",
+            "answer": "select * from tbl",
+            "showAnswer": false
+        },
+        {
+            "question": "באמצעות איזו פקודה נוסיף שדה חדש לטבלה קיימת?",
+            "answer": "ADD",
+            "showAnswer": false
+        },
+        {
+            "question": "באמצעות איזו פקודה נוסיף רשומה חדשה לטבלה?",
+            "answer": "INSERT",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נשלוף את כל הרשומות מהטבלה tbl ממויינות לפי השדה fld1 בסדר עולה?",
+            "answer": "SELECT * FROM tbl ORDER BY fld1 DESC",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נשלוף את כל הרשומות מהטבלה tbl ממויינות לפי השדה fld1 בסדר יורד?",
+            "answer": "SELECT * FROM tbl ORDER BY fld1 ASC",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נשלוף מהטבלה people רק את השדה name?",
+            "answer": "SELECT Name FROM people",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נשלוף מהטבלה people את כל הנתונים על האנשים ששמם moshe?",
+            "answer": "SELECT * FROM people WHERE Name = 'Moshe'",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נשלוף מהטבלה people את שמות האנשים המתחילים ב'a?-'",
+            "answer": "SELECT Name FROM people WHERE Name LIKE 'a%'",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נשלוף מהטבלה ,tbl את כל הרשומות שהשדה fld1 מכיל מספר בין 2 ל-18?",
+            "answer": "SELECT * FROM tbl WHERE fld1 BETWEEN 2 AND 18",
+            "showAnswer": false
+        },
+        {
+            "question": "איך נמחק את הטבלה tbl מבסיס הנתונים?",
+            "answer": "DROP TABLE tbl",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נמחק מהטבלה people את האנשים שגרים ב'Jerusalem ?-'",
+            "answer": "DELETE FROM people WHERE City='Jerusalem'",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נספור את מספר הרשומות שישנן בטבלהtbl?",
+            "answer": "SELECT COUNT (tbl)",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נעדכן את הטבלה tbl ונוסיף, בכל רשומה, 5 לשדהfld1?",
+            "answer": "UPDATE tbl SET fld1 = fld1 + 5",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נקבל את המספר הגבוה ביותר בשדה ,fld1 בטבלהtbl ?",
+            "answer": "SELECT MAX(fld1) FROM tbl",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נקבל רשימה של כל הערים בטבלה ,people מבלי שאף עיר תחזור על עצמה?",
+            "answer": "SELECT DISTINCT City FROM people",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נשלוף את כל הנתונים של האנשים הגרים ב ,'Jerusalem-'אשר גילם מעל 26 ושמם מסתיים באות'm '",
+            "answer": "SELECT * FROM people WHERE Age>26 AND City='Jerusalem' AND Name LIKE '%m'",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נשלוף רק את שמותיהם של האנשים בטבלה ,People אשר גילם מתחת ל-26 או שהם גרים ב'erusalem-'",
+            "answer": "SELECT Name FROM people WHERE Age<26 OR City='Jerusalem'",
+            "showAnswer": false
+        },
+        {
+            "question": "כיצד נשלוף את ממוצע הגילאים בטבלהpeople?",
+            "answer": "SELECT AVG(Age) FROM People",
+            "showAnswer": false
+        },
+        {
+            "question": "מה זה DBMS?",
+            "answer": "מערכת ניהול מסד נתונים- תוכנית ששלוטת על יצירה, תחזוקה ושימוש במסד נתונים. ניתן לכנות DBMS כמנהל קבצים שמנהל נתונים במסד נתונים במקום לשמור את זה במערכת קבצים.",
+            "showAnswer": false
+        },
+        {
+            "question": "מה זה RDBMS?",
+            "answer": "ראשי תיבות של Relational Database Management System- מאחסן את הנתונים באוסף הטבלאות שמקושר לפי שדות משותפים בין עמודות הטבלה. זה גם מספק אופרטורים יחסיים כדי לתפעל את הנתונים המאוחסנים בטבלאות. לדוגמא sql server.",
+            "showAnswer": false
+        },
+        {
+            "question": "מה זה SQL?",
+            "answer": "SQL ראשי תיבות של Structured Query Language, והוא רגיללתקשר עם מסד הנתונים. זוהי שפה סטנדרטית המשמשתלבצע משימות כגון אחזור, עדכון, הכנסה ומחיקה שלנתונים ממסד נתונים.",
+            "showAnswer": false
+        },
+        {
+            "question": "מה זה Database?",
+            "answer": "מסד נתונים אינו אלא צורה מאורגנת של נתונים לגישה נוחה,אחסון, אחזור וניהול נתונים. זה ידוע גם בשםצורה מובנית של נתונים שניתן לגשת אליהם בדרכים רבות.דוגמה: מסד ניהול בית ספר, ניהול בנקמאגר מידע.",
+            "showAnswer": false
+        },
+        {
+            "question": "מהם טבלאות ושדות?",
+            "answer": "טבלה הינה קבוצת נתונים שמאורגנת בודל עם עמודות ושורות, לטבלה יש עמודות שנקראות שדות אבליכול להיות כל מספר של שורות שנקרא רשומה.",
+            "showAnswer": false
+        },
+        {
+            "question": "מהו primary key?",
+            "answer": "מפתח ראשי הוא שילוב של שדות המציינים שורה באופן ייחודי אינו יכול להכיל NULL",
+            "showAnswer": false
+        },
+        {
+            "question": "מהו unique key?",
+            "answer": "אומר שלכל שורה הערך בעמודה זו צריך להיות ייחודי ולא ניתן לכתוב 2 שמות משתשים אותו דבר. מפתח ראשי הינו אוטומטי ומפתח ייחודי לא, יכול להיות כמה מפתחות ייחודיים בטבלה אבל מפתח ראשי אחד בלבד.",
+            "showAnswer": false
+        },
+        {
+            "question": "מה זה foreign key?",
+            "answer": "מפתח זר הוא מפתח ראשי של טבלה מסוימת שנכנס כמפתח ראשי של טבלה אחרת שיש לה קשר לטבלה הראשונה",
+            "showAnswer": false
+        },
+        {
+            "question": "מה זה join?",
+            "answer": "שליפת נתונים מכמה טבלאות שונות בהתבסס על הקשרים בין שדות הטבלאות. למפתחות יש תפקיד רכזי ב JOIN.",
+            "showAnswer": false
+        },
+        {
+            "question": "מהם סוגי ה join הקיימים, הסבירי כל אחד מהם",
+            "answer": "ישנם סוגים שונים של JOIN שניתן להשתמש בהם כדי לשלוף נתונים וזה תלוי בחיס בין הטבלאות: inner join - מחזיר שורות כאשר יש לפחות התאמה אחת של שורות בין הטבלאות. Right Join - להראות את כל השורות מהטבלה השניה למרות שאין נתונים בראשונה. left join - להראות את כל השורות מהטבלה הראשונה למרות שאין נתונים בטבלה השניה. full join- להראות את כל השורות משתי הטבלאות. רשומות שאין להם רשומה מתאימה בטבלה השניה יופיעו כ NULL תחת העמודות השייכות לטבלה השניה.",
+            "showAnswer": false
+        },
+        {
+            "question": "",
+            "answer": "",
+            "showAnswer": false
+        },
+        {
+            "question": "",
+            "answer": "",
+            "showAnswer": false
+        },
+        {
+            "question": "",
+            "answer": "",
+            "showAnswer": false
+        },
+        {
+            "question": "",
+            "answer": "",
+            "showAnswer": false
+        },
+        {
+            "question": "",
+            "answer": "",
+            "showAnswer": false
+        },
+        {
+            "question": "",
+            "answer": "",
+            "showAnswer": false
+        },
+        {
+            "question": "",
+            "answer": "",
+            "showAnswer": false
+        }
+    ]
+}

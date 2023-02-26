@@ -1,0 +1,20 @@
+.question-div{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.subject-btn{
+    background-color: #075659;
+    color: #fff;
+    font-size: large;
+    margin-bottom: 1rem;
+    padding: 0.2rem 1rem;
+    width: 250px;
+}
+
+.title{
+    text-align: center;
+    margin-top: 5%;
+    color: #075659;
+    font-weight: bold;
+}

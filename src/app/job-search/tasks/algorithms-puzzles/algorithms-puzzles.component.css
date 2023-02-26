@@ -1,0 +1,16 @@
+.title{
+    text-align: center;
+    font-weight: bold;
+    width: 250px;
+    margin-top: 5%;
+    color: #075659;
+}
+
+.subject-p{
+    font-size: large;
+    margin-top: 2rem;
+    width: 500px;
+    margin-right: -9rem;
+    border: 1px solid;
+    padding: 1rem;
+}

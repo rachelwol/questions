@@ -1,0 +1,41 @@
+<div style="margin-right: 35%; width: 30vw; margin-top: 2rem; font-size: large; color:#075659">
+    <h2 class="title">התחבר</h2>
+    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+        <div style="display: grid;" class="form-group" [ngClass]="{'has-error': f.submitted && !username.valid}">
+            <label for="username">שם משתמש *</label>
+            <mat-form-field>
+                <input matInput style="color: black; direction: rtl; text-align: right;" type="text"
+                    class="form-control" name="username" [(ngModel)]="user.username" #username="ngModel" required />
+                <mat-error *ngIf="f.submitted && !username.valid" style="text-align: right;">שם המשתמש הינו
+                    חובה</mat-error>
+            </mat-form-field>
+        </div>
+        <div style="display: grid; margin-top: 1rem;" class="form-group" [ngClass]="{'has-error': f.submitted && !password.valid}">
+            <label for="password">סיסמה *</label>
+            <mat-form-field>
+                <input matInput [type]="hide ? 'password' : 'text'"
+                    style="color: black; direction: rtl; text-align: right;" class="form-control" name="password"
+                    [(ngModel)]="user.password" #password="ngModel" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="f.submitted && !password.valid" style="text-align: right;">חובה להזין
+                    סיסמה</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form-group" style="margin-top: 1rem;">
+            <button style="width:100%; margin-bottom: 1rem;" type="submit" [disabled]="loading" class="subject-btn"
+                mat-raised-button>התחבר</button>
+            <div *ngIf="loading">מתחבר...</div>
+            <!-- <div style="margin-bottom: 1rem; font-size: medium;">
+                <span>אין לך עדיין חשבון? </span>
+                <a [routerLink]="['/register']" style="color:#075659">הירשם</a>
+            </div> -->
+            <div style="font-size: medium;">
+                <span>שכחת סיסמה? </span>
+                <a [routerLink]="['/forgot-password']" style="color:#075659">איפוס סיסמה</a>
+            </div>
+        </div>
+    </form>
+</div>

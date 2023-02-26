@@ -1,0 +1,17 @@
+.subject-btn{
+    color: #075659;
+    font-size: large;
+    margin-bottom: 1rem;
+    padding: 0.2rem 1rem;
+    width: 250px;
+}
+
+.title{
+    text-align: center;
+    font-size: larger;
+    width: 250px;
+    margin-top: 5%;
+    color: #075659;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}

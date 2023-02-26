@@ -1,0 +1,20 @@
+<div style="margin-right: 35%; width: 30vw; margin-top: 2rem; font-size: large; color:#075659">
+    <h2 class="title">בחר את הנושא הרצוי</h2>
+    <form name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
+        <div *ngFor="let subjectSelected of subjectsSelected; let i = index" style="display: grid;" class="form-group">
+            <mat-form-field appearance="fill">
+                <mat-label>בחר נושא</mat-label>
+                <mat-select (valueChange)="changeValue($event, i)" [value]="subjectSelected">
+                  <mat-option value="angular2">angular 2</mat-option>
+                  <mat-option value="cSharp">C#</mat-option>
+                  <mat-option value="sql">sql</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <button style="width:100%; margin-bottom: 2rem;" class="subject-btn"
+            mat-raised-button (click)="add()">+</button>
+        <button style="margin-bottom: 2rem;" type="submit" class="subject-btn"
+            mat-raised-button (click)="save()">המשך</button>
+
+    </form>
+</div>

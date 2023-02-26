@@ -1,0 +1,16 @@
+<div style="margin-right: 35%; width: 30vw; margin-top: 2rem; font-size: large; color:#075659">
+    <h2 class="title">ראיון אישי</h2>
+    <p>הי נעים מאד שמי לוגי ואני המראיין שלך</p>
+    <p>נתחיל בשאלות:</p>
+    <div style="margin-top: 3rem; margin-bottom: 5rem;" *ngIf="questionsObj.questions.length">
+        <div *ngIf="questionsObj.questions[questionIndex].showAnswer == false" class="question-div">
+            <p style="color: #075660; font-size: large;">{{questionsObj.questions[questionIndex].question}}</p>
+        </div>
+        <div *ngIf="questionsObj.questions[questionIndex].showAnswer == true">
+            <p style="color: #075660; font-size: large; text-align: center; margin-top: 1rem; margin-bottom: 1rem;">
+                {{questionsObj.questions[questionIndex].answer}}</p>
+        </div>
+    </div>
+    <button class="subject-btn" style="float: left; margin-right: 1.5rem;" mat-raised-button
+        (click)="nextQuestion()">הבא</button>
+</div>

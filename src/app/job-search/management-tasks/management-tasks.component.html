@@ -1,0 +1,44 @@
+<div style="margin-right: 35%; width: 30vw; margin-top: 2rem; font-size: large; color:#075659">
+  <h1 class="title">שאלון</h1>
+  <section class="example-section" [formGroup]="toppings">
+    <span>באיזה מקצוע תרצה להשתפשף?</span>
+    <p style="margin-top: 1rem;"><mat-checkbox formControlName="personal">ראיונות אישיים</mat-checkbox></p>
+    <p><mat-checkbox formControlName="angular2">angular2</mat-checkbox></p>
+    <p><mat-checkbox formControlName="cSharp">C#</mat-checkbox></p>
+    <p><mat-checkbox formControlName="sql">sql</mat-checkbox></p>
+    <p><mat-checkbox formControlName="nodejs">node.js</mat-checkbox></p>
+  </section>
+  <form class="example-form" style="margin-top: 1.5rem;">
+    <div style="display: grid;">
+      <span>כמה שאלות אלגוריתמים תרצה לפתור ביום?</span>
+      <mat-form-field class="example-full-width">
+        <input matInput style="color: black; direction: rtl; text-align: right;">
+      </mat-form-field>
+    </div>
+    <div style="display: grid;">
+      <span>כמה שאלות מראיונות עבודה תרצה לענות ביום?</span>
+      <mat-form-field class="example-full-width">
+        <input matInput style="color: black; direction: rtl; text-align: right;">
+      </mat-form-field>
+    </div>
+    <div style="display: grid;">
+      <span>כמה זמן תרצה להקדיש לכתיבת קוד ביום?</span>
+      <mat-form-field class="example-full-width">
+        <input matInput style="color: black; direction: rtl; text-align: right;">
+      </mat-form-field>
+    </div>
+    <div style="display: grid;">
+      <span>כמה קורות חיים תרצה לשלוח ביום?</span>
+      <mat-form-field class="example-full-width">
+        <input matInput style="color: black; direction: rtl; text-align: right;">
+      </mat-form-field>
+    </div>
+    <div style="display: grid;">
+      <span>איזה נושאים חדשים תרצה ללמוד?</span>
+      <mat-form-field class="example-full-width">
+        <input matInput style="color: black; direction: rtl; text-align: right;">
+      </mat-form-field>
+    </div>
+  </form>
+  <button class="subject-btn" mat-raised-button>שמור</button>
+</div>

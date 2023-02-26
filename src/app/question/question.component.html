@@ -1,0 +1,24 @@
+<div style="margin-right: 25%; width: 52vw;">
+    <h1 class="title">ראיון אישי</h1>
+    <div style="margin-top: 3rem; margin-bottom: 5rem;" *ngIf="questionsObj.questions.length">
+        <div style="display: grid;" *ngIf="questionsObj.questions[questionIndex].showAnswer == false" class="question-div">
+            <p style="color: #075660; font-size: large;">{{questionsObj.questions[questionIndex].question}}</p>
+        </div>
+        <div *ngIf="questionsObj.questions[questionIndex].showAnswer == true">
+            <p style="color: #075660; font-size: large; text-align: center; margin-top: 1rem; margin-bottom: 1rem;">
+                {{questionsObj.questions[questionIndex].answer}}</p>
+        </div>
+        <div style="display: grid;">
+            <span style="color: #075660; font-size: large; margin-bottom: 1rem;">תשובה:</span>
+            <mat-form-field>
+                <textarea [(ngModel)]="questionsObj.questions[questionIndex].answer" style="color: black; direction: rtl; text-align: right; height: 235px; max-height: 235px;" matInput></textarea>
+              </mat-form-field>
+        </div>
+    </div>
+    <div style="bottom: 5rem; position: absolute;">
+        <button class="subject-btn" style="float: right;" mat-raised-button (click)="previewQuestion()">הקודם</button>
+        <!-- <button style="margin-right: 1.5rem;" class="subject-btn" mat-raised-button
+                (click)="showAnswer()">{{answerButton}}</button> -->
+        <button class="subject-btn" style="float: left; margin-right: 18.5rem;" mat-raised-button (click)="nextQuestion()">הבא</button>
+    </div>
+</div>
