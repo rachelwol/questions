@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuestionComponent } from './question/question.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CvLiksComponent } from './cv-liks/cv-liks.component';
 import { MainNavigateComponent } from './main-navigate/main-navigate.component';
 import { UserDetailsComponent } from './ex1/user-details/user-details.component';
@@ -36,6 +36,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { InterviweTypeFormComponent } from './mock-interview/interviwe-type-form/interviwe-type-form.component';
 import { PersonalInterviewComponent } from './mock-interview/personal-interview/personal-interview.component';
+import { AuthInterceptorService } from './services/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -81,6 +82,7 @@ import { PersonalInterviewComponent } from './mock-interview/personal-interview/
   ],
   providers: [
     AuthGuard,
+    {provide : HTTP_INTERCEPTORS, useClass : AuthInterceptorService, multi : true}
   ],
   bootstrap: [AppComponent]
 })

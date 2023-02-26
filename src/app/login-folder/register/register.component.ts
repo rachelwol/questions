@@ -1,7 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-register',
@@ -15,20 +15,15 @@ export class RegisterComponent implements OnInit {
   returnUrl: string = '';
   hide: boolean = true;
 
-  constructor(private authenticationService: AuthenticationService, private activatedRoute: ActivatedRoute,
-    private router: Router) { }
+  constructor(private activatedRoute: ActivatedRoute,
+    private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
-  register() {
+  register(user: any) {
     this.loading = true;
-    this.authenticationService.login(this.user.username, this.user.password).subscribe(data => {
-      this.router.navigate([this.returnUrl]);
-    }, err => {
-      alert(err.message);
-      this.loading = false;
-    });
+    // this.http.post('http://localhost:3000/api/userLogin/login')
   }
 
 }

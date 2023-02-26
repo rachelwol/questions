@@ -18,6 +18,7 @@ import { InterviweTypeFormComponent } from './mock-interview/interviwe-type-form
 import { PersonalInterviewComponent } from './mock-interview/personal-interview/personal-interview.component';
 import { SubjectsFormComponent } from './mock-interview/subjects-form/subjects-form.component';
 import { QuestionComponent } from './question/question.component';
+import { GuardService } from './services/guard.service';
 
 const routes: Routes = [
   { path: 'questions/:type', component: QuestionComponent,
@@ -53,6 +54,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent,
   //  canActivate: [AuthGuard] 
   },
+  { path: 'home', component: HomeComponent, canActivate: [GuardService]},
   { path: 'subjects-form', component: SubjectsFormComponent },
   { path: 'personal-interview', component: PersonalInterviewComponent },
   { path: '**', redirectTo: '' },

@@ -1,6 +1,6 @@
 <div style="margin-right: 30%; width: 40vw; margin-top: 2rem; font-size: large; color:#075659">
     <h2 class="title">הרשם</h2>
-    <form style="margin-top: 3rem;" name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+    <form style="margin-top: 3rem;" name="form" (ngSubmit)="f.form.valid && register(user)" #f="ngForm" novalidate>
         <div style="display: flex;">
             <div style="display: grid; width: 45%;" class="form-group"
                 [ngClass]="{'has-error': f.submitted && !username.valid}">

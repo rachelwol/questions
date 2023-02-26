@@ -1,6 +1,6 @@
 <div style="margin-right: 35%; width: 30vw; margin-top: 2rem; font-size: large; color:#075659">
     <h2 class="title">התחבר</h2>
-    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+    <form name="form" (ngSubmit)="f.form.valid && login(user)" #f="ngForm" novalidate>
         <div style="display: grid;" class="form-group" [ngClass]="{'has-error': f.submitted && !username.valid}">
             <label for="username">שם משתמש *</label>
             <mat-form-field>

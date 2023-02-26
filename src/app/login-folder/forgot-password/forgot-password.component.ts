@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -10,7 +9,7 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 export class ForgotPasswordComponent implements OnInit {
 
 
-  constructor(private authenticationService: AuthenticationService, private activatedRoute: ActivatedRoute,
+  constructor(private activatedRoute: ActivatedRoute,
     private router: Router) { }
 
     user: any = {};
