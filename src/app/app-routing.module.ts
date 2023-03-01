@@ -54,7 +54,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent,
   //  canActivate: [AuthGuard] 
   },
-  { path: 'home', component: HomeComponent, canActivate: [GuardService]},
+  { path: 'home', component: HomeComponent},
   { path: 'subjects-form', component: SubjectsFormComponent },
   { path: 'personal-interview', component: PersonalInterviewComponent },
   { path: '**', redirectTo: '' },

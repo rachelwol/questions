@@ -11,11 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/api/userDetails').subscribe((data: any) => {
-      alert(data.username);
-    }, err => {
-      alert(err.error);
-    })
+
   }
 
 }

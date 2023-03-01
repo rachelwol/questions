@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   username = '';
   password = '';
 
-  constructor(private activatedRoute: ActivatedRoute,
+  constructor(private activatedRoute: ActivatedRoute, private userService : UserService,
     private router: Router, private http: HttpClient, private authService: AuthService) { }
 
   ngOnInit(): void {
@@ -25,15 +26,16 @@ export class LoginComponent implements OnInit {
   }
 
   login(user: any) {
-    this.http.post('http://localhost:3000/api/userLogin/login',{username: user.username, password: user.password}).subscribe((data:any) => {
+    this.userService.userLogin(user).subscribe((data:any) => {
       if(data.token){
         this.authService.saveToken(data.token);
-        this.authService.saveRole(data.role);
+        this.authService.saveRole(data.userDetails.role);
+        this.userService.setUserDetails(data.userDetails);
         this.router.navigate(['/home']);
       }
     }, err=>{
       alert(err.error);
-    })
+    });
   }
 
 }

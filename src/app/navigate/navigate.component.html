@@ -22,16 +22,24 @@
             <i class="fa fa-list-alt" aria-hidden="true"></i>
         </button>
         <div style="position: fixed; left: 1rem;">
-            <button routerLink="/login" mat-raised-button
+            <button *ngIf="!isUser" routerLink="/login" mat-raised-button
                 style="width: 5rem; background: #075660; color: #fff; margin-right: 2rem;">
                 התחבר
                 <i class="fa fa-sign-in" aria-hidden="true"></i>
             </button>
-            <button routerLink="/register" mat-raised-button
+            <button *ngIf="!isUser" routerLink="/register" mat-raised-button
                 style="width: 5rem; background: #075660; color: #fff; margin-right: 1rem;">
                 הירשם
                 <i class="fa fa-user-plus" aria-hidden="true"></i>
             </button>
+            <button *ngIf="isUser" (click)="logout()" mat-raised-button
+                style="width: 5rem; background: #075660; color: #fff; margin-right: 2rem;">
+                התנתק
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </button>
+            <p *ngIf="isUser" style="color: #fff; margin-right: 1rem; display: inline; font-size: 1rem;">
+                {{username}}
+            </p>
         </div>
     </mat-toolbar>
 </p>
